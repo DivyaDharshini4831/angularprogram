@@ -1,0 +1,37 @@
+<p>databinding works!</p>
+<h1>Angular Standalone Data Binding Demo</h1>
+
+<!-- 1. Interpolation -->
+<h3>1️⃣ Interpolation</h3>
+<p>Student Name: {{ studentName }}</p>
+<p>Age: {{ age }}</p>
+
+<hr>
+
+<!-- 2. Property Binding -->
+<h3>2️⃣ Property Binding</h3>
+<button [disabled]="isButtonDisabled">
+  Submit
+</button>
+
+<br><br>
+<button (click)="toggleButton()">
+  Enable / Disable Submit Button
+</button>
+
+<hr>
+
+<!-- 3. Event Binding -->
+<h3>3️⃣ Event Binding</h3>
+<button (click)="showMessage()">
+  Click Me
+</button>
+<p>{{ message }}</p>
+
+<hr>
+
+<!-- 4. Two-Way Data Binding -->
+<h3>4️⃣ Two-Way Data Binding</h3>
+<input type="text" [(ngModel)]="studentName" placeholder="Enter student name">
+
+<p>Updated Name: {{ studentName }}</p>
