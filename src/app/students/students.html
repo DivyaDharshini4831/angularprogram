@@ -1,0 +1,61 @@
+<h2>Student CRUD Operations</h2>
+
+<form (ngSubmit)="saveStudent()">
+  <input
+    type="text"
+    placeholder="Name"
+    [(ngModel)]="student.name"
+    name="name"
+    required
+  />
+
+  <input
+    type="number"
+    placeholder="Age"
+    [(ngModel)]="student.age"
+    name="age"
+    required
+  />
+
+  <input
+    type="text"
+    placeholder="Course"
+    [(ngModel)]="student.course"
+    name="course"
+    required
+  />
+
+  <button type="submit">
+    {{ isEdit ? 'Update Student' : 'Add Student' }}
+  </button>
+
+  <button type="button" (click)="resetForm()">Clear</button>
+</form>
+
+<hr />
+
+<table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Course</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let s of students">
+
+      <td>{{ s.id }}</td>
+      <td>{{ s.name }}</td>
+      <td>{{ s.age }}</td>
+      <td>{{ s.course }}</td>
+      <td>
+        <button (click)="editStudent(s)">Edit</button>
+        <button (click)="deleteStudent(s.id)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

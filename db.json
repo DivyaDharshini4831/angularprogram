@@ -1,0 +1,17 @@
+{
+  "students": [
+    {
+      "id": "1",
+      "name": "Divya",
+      "age": 20,
+      "course": "FSD"
+    },
+    {
+      "id": "3",
+      "name": "Sneha",
+      "age": 19,
+      "course": "angular"
+    }
+   
+  ]
+}

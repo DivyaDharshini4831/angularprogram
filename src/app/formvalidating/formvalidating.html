@@ -1,0 +1,30 @@
+<p>formvalidating works!</p>
+
+<form #myForm="ngForm" (ngSubmit)="submitForm()">
+
+  <label>Username:</label>
+  <input type="text"
+         name="username"
+         [(ngModel)]="user.username"
+         required>
+  <br><br>
+
+  <label>Email:</label>
+  <input type="email"
+         name="email"
+         [(ngModel)]="user.email"
+         required>
+  <br><br>
+
+  <label>Password:</label>
+  <input type="password"
+         name="password"
+         [(ngModel)]="user.password"
+         required>
+  <br><br>
+
+  <button type="submit" [disabled]="myForm.invalid">
+    Submit
+  </button>
+
+</form>
